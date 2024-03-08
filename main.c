@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include"memld.h"
 /*
 We will be putting a Memory Leak Detector library between the C application abd Kernel. By doing so we'll keep track of the all memory objects used by the application.
 
