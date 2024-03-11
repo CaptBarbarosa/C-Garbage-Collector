@@ -17,6 +17,7 @@ typedef struct student_ {
 
 
 int main(){
+    /*
     size_t emp_size = calculateStructureSizeWithNames(5,
         "emp_name", sizeof(((emp_t *)0)->emp_name),
         "emp_id", sizeof(((emp_t *)0)->emp_id),
@@ -26,5 +27,8 @@ int main(){
     );
     size_t name_size = calculateStructureSizeWithNames(1,"emp_name",sizeof(((emp_t *)0)->emp_name));
     size_t deneme = calculate_single_field_size("student_","id");
+    */
+    int sum_of_nums = my_sum(4,3,5,2,6); //Please be carefull that the "4" at the beginnning is the "count" in the my_sum function.
+    printf("my_sum = %d\n",sum_of_nums);
     return 0;
 }
