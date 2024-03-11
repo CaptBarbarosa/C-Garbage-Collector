@@ -28,15 +28,3 @@ size_t calculateStructureSizeWithNames(int num_fields, ...){
     va_end(args);
     return total_size;
 }
-
-size_t calculate_single_field_size(const char *field_name,const char *struct_name, ...){
-    const char *format;
-    va_list args;
-    va_start(args,struct_name);
-    while((*format == 's' && strcmp(field_name,format+1) == 0 )){
-        printf("There exists a field name called %s in %s",struct_name,field_name);
-        //return sizeof(())
-    }
-    va_end(args);
-    return 0;
-}
