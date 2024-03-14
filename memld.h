@@ -8,6 +8,8 @@
 typedef struct structure_database structure_database;
 typedef struct struct_field_info struct_field_info;
 
+#define OFFSETOF(struct_name, fld_name)\(unsigned int)&(((struct_name *)0)->fld_name)
+#define FIELD_SIZE(struct_name, fld_name)\sizeof(((struct_name *)0)->fld_name)
 
 typedef enum{ // Data types in C.
     UINT8,
@@ -28,7 +30,6 @@ struct struct_field_info{ // This is the information about the fields( or variab
     data_type_t dtype;
     char nested_str_name[MAX_CHAR_SIZE];
 };
-
 
 struct structure_database{
     char name_of_the_structure[MAX_CHAR_SIZE]; //This is the name of the structure we have in our DB. We'll be able to keep track of all structures thanks to this. This is a key, if you will.
@@ -67,3 +68,18 @@ In the fields[0] we will store the "std_name", sizeof(char)*30, offset=0, CHAR, 
 ...
 In the fields[3] student_advisor, sizeof(void *), 38, OBJ_PTR, student will be kept.
 */
+
+/*
+size_t calculate_Field_Size(const char *struct_name, const char *field_name){
+    return offsetof(struct_name,field_name);
+    //return sizeof(((struct_name *)0)->field_name);
+}*/
+
+
+
+
+
+
+
+
+
