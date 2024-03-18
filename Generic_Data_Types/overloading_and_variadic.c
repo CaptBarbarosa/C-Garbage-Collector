@@ -26,13 +26,13 @@ void print_values(char *received, ...){ //I'm working with the vairadic function
     va_start(args, received);
     while(*current != '\0'){
         if(*current == 'i'){
-            print_int_value
+            print_int_value(va_arg(args,int));
         }
         else if(*current == 'd'){
-            printf("Double\n");
+            print_double_value(va_arg(args,double));
         }
         else{
-            printf("String\n");
+            print_value(va_arg(args,char *));
         }
         current++;
     }
